@@ -1,4 +1,5 @@
 @echo off
+Rem to use this anywhere, put it in your system32 folder.
 if "%~1"=="/p" set pause=true & shift
 if not "%~1"=="" (
 	if not exist "%~1\*" exit /b 1
