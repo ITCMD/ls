@@ -10,7 +10,7 @@ if "%~2"=="/p" set pause=true
 setlocal enabledelayedexpansion
 set num=0
 for /f "tokens=*" %%A in ('dir /b') do (
-	set /a num+=1
+	if "!pause!"=="true" set /a num+=1
 	set val=0
 	if exist "%%~A\*" set val=1&echo [44m%%~A[0m
 	if /i "%%~xA"==".bat" set val=1&echo [92m%%~A[90m %%~zA Bytes[0m
